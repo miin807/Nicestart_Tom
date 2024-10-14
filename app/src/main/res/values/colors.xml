@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Timberwolf">#ffdad7cd</color>
+    <color name="Sage">#ffa3b18a</color>
+    <color name="Fern_green">#ff588157</color>
+    <color name="Hunter_green">#ff3a5a40</color>
+    <color name="Brunswick_green">#ff344e41</color>
 </resources>
