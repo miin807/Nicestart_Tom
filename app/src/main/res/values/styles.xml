@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonFlat">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/Hunter_green</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="buttonFlatOutlined">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeColor">@color/Hunter_green</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/Hunter_green</item>
+    </style>
+
+    <style name="buttonoutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeColor">@android:color/white</item>
+    </style>
+
+    <style name="buttonOutlinedAlt" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+</resources>

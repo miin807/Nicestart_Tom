@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Nicestart"
         tools:targetApi="31">
         <activity
+            android:name=".SignUp"
+            android:parentActivityName=".Login"
+            android:theme="@style/Theme.Nicestart.ActionBar"
+            android:exported="true" />
+        <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>

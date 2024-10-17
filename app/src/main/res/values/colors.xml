@@ -7,4 +7,5 @@
     <color name="Fern_green">#ff588157</color>
     <color name="Hunter_green">#ff3a5a40</color>
     <color name="Brunswick_green">#ff344e41</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
