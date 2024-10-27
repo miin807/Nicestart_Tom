@@ -91,7 +91,7 @@
 
     <Button
         android:id="@+id/button_signup"
-        style="@style/buttonFlatOutlined"
+        style="@style/buttonFlatOutlinedAlt"
         android:onClick="openSignup"
         android:text="Sign up"
         android:layout_width="0dp"
