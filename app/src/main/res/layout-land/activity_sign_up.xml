@@ -12,38 +12,51 @@
         android:id="@+id/person"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
+        android:scaleType="fitEnd"
         android:src="@drawable/person2"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="90dp">
-
-    </ImageView>
+        android:translationX="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main"/>
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:src="@drawable/logo"
-        >
-    </ImageView>
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        />
 
     <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_width="wrap_content"
+        android:id="@+id/lin_layout1"
+
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
         android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintBottom_toTopOf="@id/lin_layout2"
         >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til1"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            app:startIconDrawable="@drawable/usericon">
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+
+            app:startIconDrawable="@drawable/usericon"
+            >
 
             <EditText
                 android:id="@+id/username"
@@ -51,18 +64,19 @@
                 android:layout_height="match_parent"
                 android:alpha="0.6"
                 android:background="@color/white"
-                android:hint="Username">
-
-            </EditText>
+                android:hint="Username"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til2"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:startIconDrawable="@drawable/email">
+            android:layout_weight="1"
+
+            app:startIconDrawable="@drawable/email"
+            >
 
             <EditText
                 android:id="@+id/email"
@@ -71,24 +85,35 @@
                 android:alpha="0.6"
                 android:background="@color/white"
                 android:hint="Email"
-                android:inputType="textEmailAddress">
-
-            </EditText>
+                android:inputType="textEmailAddress"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:id="@+id/lin_layout2"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/lin_layout1"
+        app:layout_constraintBottom_toTopOf="@id/lin_layout3">
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til3"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/passwordicon">
 
@@ -99,17 +124,17 @@
                 android:alpha="0.6"
                 android:background="@color/white"
                 android:hint="Password"
-                android:inputType="textPassword">
-
-            </EditText>
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til4"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/passwordicon">
 
@@ -120,49 +145,58 @@
                 android:alpha="0.6"
                 android:background="@color/white"
                 android:hint="Confirm Password"
-                android:inputType="textPassword">
+                android:inputType="textPassword"/>
 
-            </EditText>
 
         </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_signup"
-        style="@style/buttonFlat"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:onClick="openMain"
-        android:text="Sign up"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/til4" />
+    <LinearLayout
+        android:id="@+id/lin_layout3"
 
-    <Button
-        android:id="@+id/button_cancel"
-        style="@style/buttonFlatOutlined"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="12dp"
-        android:onClick="openLogin"
-        android:text="Cancel"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:orientation="horizontal"
+
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/button_signup"/>
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/lin_layout2"
+        app:layout_constraintBottom_toBottomOf="@id/main">
+
+        <Button
+            android:id="@+id/button_signup"
+            style="@style/buttonFlat"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="openMain"
+            android:text="Sign up"/>
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/buttonFlatOutlinedAlt"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="openLogin"
+            android:text="Cancel"/>
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20"/>
+        app:layout_constraintGuide_percent="0.10" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80"/>
+        app:layout_constraintGuide_percent="0.70" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
