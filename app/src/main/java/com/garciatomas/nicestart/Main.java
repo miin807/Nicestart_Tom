@@ -1,7 +1,9 @@
 package com.garciatomas.nicestart;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,9 +26,9 @@ public class Main extends AppCompatActivity {
         ImageView pfpImg = findViewById(R.id.profilePic);
 
         Glide.with(this)
-                .load("https://images.unsplash.com/photo-1527164561913-76d911aa17ff?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                .load("https://images.unsplash.com/photo-1601233749202-95d04d5b3c00?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 //                .load(R.drawable.person)
-//                .transition(DrawableTransitionOptions.withCrossFade(2000))
+                .transition(DrawableTransitionOptions.withCrossFade(500))
 //                .centerCrop()
                 .circleCrop()
 //                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.Brunswick_green)))
@@ -38,5 +40,10 @@ public class Main extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void openLogin(View view) {
+        Intent intent = new Intent(Main.this, Login.class);
+        startActivity(intent);
     }
 }
