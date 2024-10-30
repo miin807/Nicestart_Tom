@@ -24,7 +24,7 @@ public class Splash extends AppCompatActivity {
 
         ImageView icon = findViewById(R.id.logo);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.blink);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.bee_move2);
         icon.startAnimation(animation);
 
 
