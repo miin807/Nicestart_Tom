@@ -22,16 +22,16 @@ public class Profile extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
 
-        ImageView pfpImg = findViewById(R.id.profilePic);
-
-        Glide.with(this)
-                .load("https://images.unsplash.com/photo-1601233749202-95d04d5b3c00?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-//                .load(R.drawable.person)
-                .transition(DrawableTransitionOptions.withCrossFade(500))
-//                .centerCrop()
-                .circleCrop()
-//                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.Brunswick_green)))
-                .into(pfpImg);
+//        ImageView pfpImg = findViewById(R.id.profilePic);
+//
+//        Glide.with(this)
+//                .load("https://images.unsplash.com/photo-1601233749202-95d04d5b3c00?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+////                .load(R.drawable.person)
+//                .transition(DrawableTransitionOptions.withCrossFade(500))
+////                .centerCrop()
+//                .circleCrop()
+////                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.Brunswick_green)))
+//                .into(pfpImg);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

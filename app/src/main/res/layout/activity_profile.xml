@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintTop_toTopOf="@id/main"/>
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/profilePic"
         android:layout_width="128dp"
         android:layout_height="128dp"
@@ -27,6 +27,9 @@
         app:layout_constraintBottom_toBottomOf="@id/username"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/main"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/avatar"
         />
 
     <TextView
